@@ -30,7 +30,7 @@ URL of deployed app:  https://feliperyder.github.io/code-quiz/
 
 ## How to Use
 
-1. Open `index.html` in a web browser.
+1. Open URL of deployed app:  https://feliperyder.github.io/code-quiz/
 2. Click the "Start Quiz" button.
 3. Follow the prompts.
 4. Enter initials to save your high score
