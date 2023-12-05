@@ -1,5 +1,11 @@
 // scores.js
 
+// DOM Elements
+const clearButton = document.getElementById('clear');
+
+// Event Listeners
+clearButton.addEventListener('click', clearHighScores);
+
 function saveHighScore(initials, score) {
     // Check that initials are not empty
     if (initials.trim() !== '') {
@@ -22,14 +28,17 @@ function saveHighScore(initials, score) {
     highscoresList.innerHTML = '';
     highScores.forEach((entry, index) => {
       const listItem = document.createElement('li');
-      listItem.textContent = `${index + 1}. ${entry.initials}: ${entry.score}`;
+      listItem.textContent = `${entry.initials}: ${entry.score}`;
       highscoresList.appendChild(listItem);
     });
   }
 
   function clearHighScores() {
-    // Clear high scores
+    console.log('Clearing high scores...');
     localStorage.removeItem('highScores');
-  }
-  
+    console.log('High scores cleared.');
+    // Reload the page
+    location.reload();
+  }  
+
   loadHighScores();

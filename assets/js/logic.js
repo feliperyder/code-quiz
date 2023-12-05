@@ -14,13 +14,11 @@ const initialsInput = document.getElementById('initials');
 const timeElement = document.getElementById('time');
 const startButton = document.getElementById('start');
 const submitButton = document.getElementById('submit');
-const clearButton = document.getElementById('clear');
 
 // Event Listeners
 startButton.addEventListener('click', startQuiz);
 choicesContainer.addEventListener('click', handleChoice);
 submitButton.addEventListener('click', saveHighScore);
-clearButton.addEventListener('click', clearHighScores);
 
 // Functions
 function startQuiz() {
