@@ -14,12 +14,13 @@ const initialsInput = document.getElementById('initials');
 const timeElement = document.getElementById('time');
 const startButton = document.getElementById('start');
 const submitButton = document.getElementById('submit');
+const clearButton = document.getElementById('clear');
 
 // Event Listeners
 startButton.addEventListener('click', startQuiz);
 choicesContainer.addEventListener('click', handleChoice);
-submitButton.addEventListener('click', function () {
-});
+submitButton.addEventListener('click', saveHighScore);
+clearButton.addEventListener('click', clearHighScores);
 
 // Functions
 function startQuiz() {
@@ -115,5 +116,14 @@ function saveHighScore() {
     window.location.href = 'highscores.html';
   }
 }
-randomizeQuestions();
-saveHighScore();
+
+function loadHighScores() {
+  // Load and display high scores
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+  // Update your DOM to display the high scores
+}
+
+function retakeQuiz() {
+  // Reload the page to retake the quiz
+  location.reload();
+}
